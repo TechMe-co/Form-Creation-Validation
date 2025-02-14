@@ -22,27 +22,27 @@ const content = document.addEventListener('DOMContentLoaded', function () {
 
     if(username.length < 3) {
         isValid = false;
-        messages = 'Please enter the correct value!';
+        messages.push('Please enter the correct value!');
     };
 
     if (!email.includes('@', '.')) {
         isValid = false;
-        messages = 'Must includes @ and .';
+        messages.push('Must includes @ and .');
     };
 
     if(password.length < 8) {
         isValid = false;
-        messages = 'Values must be 8 or more!';
+        messages.push('Values must be 8 or more!');
     };
 
     // displaying feedback
     feedbackDiv.style.display = "block";
     if (isValid = true) {
         feedbackDiv.textContent = "Registration successful!";
-        feedbackDiv.style.color = #28a745;
+        feedbackDiv.style.color = "#28a745";
     } else {
         feedbackDiv.innerHTML= messages + "<br>";
-        feedbackDiv.style.color = #dc3545;
+        feedbackDiv.style.color = "#dc3545";
     }
 
 });
